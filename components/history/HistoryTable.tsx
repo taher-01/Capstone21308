@@ -155,7 +155,7 @@ export function HistoryTable() {
             value={category}
             onChange={(e) => { setCategory(e.target.value); setPage(1); }}
           >
-            <option value="all">All categories</option>
+            <option value="all">All acoustic patterns</option>
             {categories.map((c) => (
               <option key={c} value={c}>{c}</option>
             ))}
@@ -189,7 +189,7 @@ export function HistoryTable() {
               <th className="px-4 py-3 font-medium">Event ID</th>
               <th className="px-4 py-3 font-medium">Date and time</th>
               <th className="px-4 py-3 font-medium">Result</th>
-              <th className="px-4 py-3 font-medium">Category</th>
+              <th className="px-4 py-3 font-medium">Acoustic pattern</th>
               <th className="px-4 py-3 font-medium">Confidence</th>
               <th className="px-4 py-3 font-medium">Processing</th>
               <th className="px-4 py-3 font-medium">Status</th>

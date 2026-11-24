@@ -1,7 +1,7 @@
 import type { CryEvent, AppNotification, SystemStatus } from "@/types";
 
-// DEMO ONLY. "category_a" and "category_b" are placeholders, NOT real labels.
-// Real Model 2 labels are added after we verify them from the training dataset.
+// DEMO ONLY. Sample events, not real detections. "neh" and "owh" are pattern names from the dataset.
+// The final label list is confirmed when the backend model is verified.
 const base = Date.parse("2026-11-24T10:15:00Z");
 
 export const demoEvents: CryEvent[] = Array.from({ length: 24 }, (_, i) => {
@@ -19,7 +19,7 @@ export const demoEvents: CryEvent[] = Array.from({ length: 24 }, (_, i) => {
       event.model2Prediction = "uncertain";
       event.model2Confidence = 0.42;
     } else {
-      event.model2Prediction = i % 2 === 0 ? "category_a" : "category_b";
+      event.model2Prediction = i % 2 === 0 ? "neh" : "owh";
       event.model2Confidence = Math.round((0.55 + ((i * 11) % 30) / 100) * 100) / 100;
     }
   }

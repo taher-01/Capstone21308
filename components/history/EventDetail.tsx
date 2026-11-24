@@ -96,7 +96,7 @@ export function EventDetail() {
         <Card title="Model 2: further cry classification">
           {isCry ? (
             <dl className="divide-y divide-line">
-              <Row label="Category" value={category ?? "Not classified"} />
+              <Row label="Acoustic pattern" value={category ?? "Not classified"} />
               <Row label="Confidence" value={formatPercent(event.model2Confidence)} />
             </dl>
           ) : (
@@ -125,7 +125,7 @@ export function EventDetail() {
       </div>
 
       <p className="text-xs text-ink-muted">
-        Experimental prediction based on audio data, not a medical diagnosis.
+        Experimental prediction based on audio data. The acoustic pattern is a sound group from the training dataset, not a reason for crying or a diagnosis.
       </p>
     </div>
   );

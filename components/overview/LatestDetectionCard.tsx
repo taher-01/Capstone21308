@@ -43,7 +43,7 @@ export function LatestDetectionCard({ event, isDemo }: { event: CryEvent | null;
 
       <dl className="mt-5 grid grid-cols-2 gap-4 text-sm sm:grid-cols-3">
         <div>
-          <dt className={isCry ? "text-white/60" : "text-ink-muted"}>Category</dt>
+          <dt className={isCry ? "text-white/60" : "text-ink-muted"}>Acoustic pattern</dt>
           <dd className="font-medium">{category ?? "Not applicable"}</dd>
         </div>
         <div>
@@ -59,7 +59,7 @@ export function LatestDetectionCard({ event, isDemo }: { event: CryEvent | null;
       </dl>
 
       <p className={`mt-5 text-xs ${isCry ? "text-white/50" : "text-ink-muted"}`}>
-        Experimental prediction, not a medical diagnosis.
+        Experimental prediction. The acoustic pattern is a sound group from the training dataset, not a reason for crying or a diagnosis.
       </p>
     </div>
   );
